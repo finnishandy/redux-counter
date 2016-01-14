@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import App from './containers/App'
 import configureStore from './store/configureStore'
+import Foo from './custom/states'
 
 const store = configureStore()
 
@@ -12,3 +13,4 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
