@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 
 export default {}
 
@@ -22,3 +22,11 @@ var store_3 = createStore(reducer_3)
 console.log('store_3 state after initialization:', store_3.getState())
 // Output: redux state after initialization: {}
 
+
+/**************************************************/
+
+
+var square = (foo) => foo * foo
+var add = (foo) => foo + foo
+var squareAdd = compose(add, square)
+console.log(squareAdd(5))
