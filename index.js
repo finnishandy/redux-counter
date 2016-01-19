@@ -5,7 +5,7 @@ import App from './containers/App'
 import configureStore from './store/configureStore'
 import Foo from './custom/states'
 
-const store = configureStore()
+const store = configureStore({counter: 3})
 
 render(
   <Provider store={store}>
